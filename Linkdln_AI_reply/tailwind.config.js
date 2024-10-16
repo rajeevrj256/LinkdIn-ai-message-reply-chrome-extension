@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
-  content: ["./**/*.{ts,tsx}"],
+  content: ["./**/*.{js,jsx,ts,tsx}"],
   plugins: [
     require("@tailwindcss/forms")
     // ...
