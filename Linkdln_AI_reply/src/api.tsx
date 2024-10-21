@@ -16,7 +16,9 @@ export const getReply = async (messageContent: string): Promise<string> => {
     });
 
     // Return the generated reply from the response
-    return response.data.reply; // Ensure this matches your backend response structure
+    console.log(response.data.reply);
+    return response.data.reply;
+
   } catch (error) {
     console.error("Error fetching reply from API:", error);
     throw new Error("Failed to generate reply. Please try again later.");

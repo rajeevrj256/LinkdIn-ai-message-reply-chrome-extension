@@ -1,10 +1,11 @@
 // main.js
 import express from "express";
 import { Model } from "./Model.js";  
+import cors from "cors"; 
 
 const app = express();
 app.use(express.json());  // Middleware to parse JSON bodies
-
+app.use(cors());
 // Define a POST endpoint to generate AI replies
 app.post("/generate-reply", async (req, res) => {
   const { content } = req.body;  // Extract 'content' from the request body
